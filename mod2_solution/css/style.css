@@ -42,7 +42,7 @@ body {
 
 .section-container .section-text {
 	background-color: red;
-	padding-top: 50px;
+	padding: 50px 15px 15px 15px;
 	border: solid #000;
 }
 
