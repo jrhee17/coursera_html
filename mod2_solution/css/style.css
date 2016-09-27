@@ -1,0 +1,75 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.module-title {
+	text-align: center;
+	margin: 30px 0px 30px 0px;
+	font-size: 1.75em;
+}
+
+.section-container {
+	border: solid #000;
+}
+
+.section-container .section-content {
+	position: relative;
+	width: 33%;
+	float: left;
+	box-sizing:border-box;
+	padding: 15px;
+	text-align: center;
+}
+
+.section-container .section-third {
+	position: relative;
+	width: 33%;
+	float: left;
+	box-sizing:border-box;
+	padding: 15px;
+	text-align: center;
+}
+
+.section-container .section-title {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	padding: 5px 50px;
+	background-color: #888;
+	border: solid #000;
+	font-size: 1.25em;
+}
+
+.section-container .section-text {
+	background-color: red;
+	padding-top: 50px;
+	border: solid #000;
+}
+
+@media (min-width: 992px) {
+	.section-container .section-content {
+		width: 33%;
+	}
+	.section-container .section-third {
+		width: 33%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.section-container .section-content {
+		width: 50%;
+	}
+	.section-container .section-third {
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.section-container .section-content {
+		width: 100%;
+	}
+	.section-container .section-third {
+		width: 100%;
+	}
+}
+
