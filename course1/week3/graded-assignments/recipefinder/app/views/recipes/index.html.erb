@@ -1,0 +1,15 @@
+<table>
+    <% @items.each do |item| %>
+        <tr>
+            <td>
+                <%= link_to(image_tag(item['image_url'], size:'100'), item['source_url'])%>
+            </td>
+            <td>
+                <%= link_to(sanitize(item['title']), item['source_url']) %>
+            </td>
+            <td>
+                <%= item['social_rank'] %>
+            </td>
+        </tr>
+    <% end %>
+</table>
