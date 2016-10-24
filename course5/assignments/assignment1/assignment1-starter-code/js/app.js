@@ -7,19 +7,29 @@
 
     LunchCheckController.$inject = ['$scope'];
     function LunchCheckController($scope) {
-        $scope.message = "";
+        $scope.textColor = "#000000";
+        $scope.borderColor = "#ffffff";
         $scope.tooMuchClicked = function () {
             // Check if input is empty
-            if($scope.lunchInput == null) {
+            if($scope.lunchInput == "" || $scope.lunchInput == null) {
                 $scope.message = "Please enter data first";
+                $scope.textColor = "red";
+                $scope.borderColor = "red";
                 return;
             }
 
             var menus = $scope.lunchInput.split(',');
-            if(menus.length > 3)
+            menus = menus.filter(Boolean);
+            console.log(menus);
+            if(menus.length > 3) {
                 $scope.message = "Too much!";
-            else
+                $scope.textColor = "red";
+                $scope.borderColor = "red";
+            } else {
                 $scope.message = "Enjoy!"
+                $scope.textColor = "green";
+                $scope.borderColor = "green";
+            }
         }
     }
 
