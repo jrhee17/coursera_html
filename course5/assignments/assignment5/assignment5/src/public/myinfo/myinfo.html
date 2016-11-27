@@ -1,0 +1,78 @@
+<h1 class="generic-title">My Info</h1>
+
+<table class="display-table" ng-if="myinfoCtrl.success" style="border: 2px black solid; margin: 0 auto;">
+    <thead>
+        <th>Category</th>
+        <th>Info</th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td class="title" colspan=2>User Info</td>
+        </tr>
+        <tr>
+            <td>
+                First Name
+            </td>
+            <td>
+                {{ myinfoCtrl.user.firstname }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name
+            </td>
+            <td>
+                {{ myinfoCtrl.user.lastname }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                {{ myinfoCtrl.user.email }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Phone Number
+            </td>
+            <td>
+                {{ myinfoCtrl.user.phone }}
+            </td>
+        </tr>
+        <tr>
+            <td class="title" colspan=2>Menu Item</td>
+        </tr>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                {{ myinfoCtrl.data.name }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Description
+            </td>
+            <td>
+                {{ myinfoCtrl.data.description }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Image
+            </td>
+            <td>
+                <img ng-src="https://peaceful-castle-82696.herokuapp.com/images/{{myinfoCtrl.data.short_name}}" height="100" width="100"/>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="display-message" ng-if="!myinfoCtrl.success">
+    Not signed up yet.
+    <a style="margin-left: 10px;" ui-sref="public.signup">Sign up now!</a>
+</div>
